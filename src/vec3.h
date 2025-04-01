@@ -19,6 +19,14 @@ class vec3 {
     double operator[](int i) const { return e[i]; }
     double& operator[](int i) { return e[i]; }
 
+    static vec3 random() {
+        return vec3(random_double(), random_double(), random_double());
+    }
+
+    static vec3 random(double min, double max) {
+        return vec3(random_double(min,max), random_double(min,max), random_double(min,max));
+    }
+
     vec3& operator+=(const vec3& v) {
         e[0] += v.e[0];
         e[1] += v.e[1];

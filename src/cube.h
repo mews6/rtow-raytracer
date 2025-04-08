@@ -21,7 +21,6 @@ class cube : public hittable {
         auto s7 = center+(radius/2) * vec3::vec3(1,1,1); 
         auto s8 = center+(radius/2) * vec3::vec3(1,-1,1); 
 
-        rec.t = root;
         rec.p = r.at(rec.t);
         vec3 outward_normal = (rec.p - center) / radius;
         rec.set_face_normal(r, outward_normal);
